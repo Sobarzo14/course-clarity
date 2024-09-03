@@ -1,2 +1,2 @@
-# course-clarity
+# Course Clarity
  
