@@ -1,0 +1,67 @@
+{
+    "course_id": "IST",
+    "course_name": "Name of the course",
+    "department": "IST",
+    "credits": 3,
+    "instructor": {
+        "name": "John Doe",
+        "email": "johndoe@psu.edu",
+        "office_hours": "MW 10:00-12:00",
+        "office_location": "Location"
+    },
+    "schedule": {
+        "days": [
+            "Monday",
+            "Wednesday",
+            "Friday"
+        ],
+        "time": "9:00-10:15",
+        "location": "Room 202"
+    },
+    "syllabus": {
+        "overview": "This course covers web programming concepts...",
+        "learning_objectives": [
+            "Understand web development frameworks",
+            "Build web-based applications",
+            "Implement front-end and back-end logic"
+        ],
+        "grading_policy": {
+            "assignments": 30,
+            "midterm": 20,
+            "final_exam": 30,
+            "participation": 20
+        },
+        "required_materials": [
+            {
+                "title": "Web Programming 101",
+                "author": "Jane Smith",
+                "isbn": "123-456-789",
+                "edition": "3rd"
+            }
+        ],
+        "assignments": [
+            {
+                "title": "Assignment 1",
+                "due_date": "2024-09-15",
+                "description": "Create a simple website using HTML, CSS, and JavaScript.",
+                "weight": 10
+            },
+            {
+                "title": "Final Project",
+                "due_date": "2024-12-01",
+                "description": "Develop a fully functioning web app.",
+                "weight": 20
+            }
+        ],
+        "policies": {
+            "attendance": "Attendance is required for all sessions.",
+            "academic_integrity": "Plagiarism will result in an F for the course."
+        }
+    },
+    "prerequisites": [
+        "IST210",
+        "IST220"
+    ],
+    "semester": "Fall 2024",
+    "enrollment_cap": 60
+}
