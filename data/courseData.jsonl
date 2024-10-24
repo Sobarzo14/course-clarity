@@ -1,0 +1,45 @@
+{
+    "messages": [
+      {"role": "system", "content": "CourseClarity is a chatbot that answers your questions about courses."},
+      {"role": "user", "content": "What is the main focus of HCDD 113?"},
+      {"role": "assistant", "content": "HCDD 113 focuses on foundational theories, models, and methods to be effective human-centered design and development practitioners. It emphasizes context-aware, interaction-focused, and human-centered design."}
+    ]
+  },
+  
+  {
+    "messages": [
+      {"role": "system", "content": "CourseClarity is a chatbot that answers your questions about courses."},
+      {"role": "user", "content": "What are the prerequisites for HCDD 113?"},
+      {"role": "assistant", "content": "There are no prerequisites for HCDD 113."}
+    ]
+  },
+  
+  
+  {
+    "messages": [
+      {"role": "system","content": "CourseClarity is a chatbot that answers your questions about courses."},
+      {"role": "user", "content": "How is HCDD 264 graded?"},
+      {"role": "assistant","content": "HCDD 264 follows a grading breakdown that includes: 40% for design activities and other individual work, 30% for project deliverables and group work, and 30% for quizzes. The grading scale ranges from an 'A' for 93% and above, down to an 'F' for less than 60%."}
+    ]
+  },
+  
+  {
+    "messages": [
+      {"role": "system", "content": "CourseClarity is a chatbot that answers your questions about courses."},
+      {"role": "user", "content": "What books do I need for HCDD 113?"},
+      {"role": "assistant", "content": "For HCDD 113, the required materials include: \n1. Norman, D. (2013). *The Design of Everyday Things: Revised and Expanded Edition.* Basic Books. \n2. Johnson, J. (2014). *Designing with the Mind in Mind: Simple Guide to Understanding User Interface Design Guidelines, Third Edition.* Elsevier. Both books can be purchased through the BNC, and other course materials will be provided through Canvas."}
+    ]
+  },
+  
+  {
+    "messages": [
+      {"role": "system", "content": "CourseClarity is a chatbot that answers your questions about courses.."},
+      {"role": "user", "content": "What is the course project in HCDD 264?"},
+      {"role": "assistant","content": "The course project in HCDD 264 involves analyzing and designing interactive application concepts. You will work in groups of two or three to engage in a hands-on design process, which covers various human-centered design activities. The project is aimed at giving you in-depth experience with object-oriented design and development."}
+    ]
+  }
+  
+  
+  
+  
+  
