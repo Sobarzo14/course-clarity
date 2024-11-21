@@ -1,29 +1,75 @@
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
-import json
-import certifi
+import time
+from pinecone import Pinecone, ServerlessSpec
 
 
-uri = "mongodb+srv://abelardosobarzo14:bLH9zCMExAb9EmzV@course-clarity-0.cqrri.mongodb.net/?retryWrites=true&w=majority&appName=course-clarity-0"
+# api_key = "pcsk_3fwQuY_T6s6Y54yGTmFeMQRf3Pp5aN1kg8sVR64mbyHFeMpsLMjWUD3BDmdLGb5h6f2Kcf"
 
+pc = Pinecone(api_key="pcsk_3fwQuY_T6s6Y54yGTmFeMQRf3Pp5aN1kg8sVR64mbyHFeMpsLMjWUD3BDmdLGb5h6f2Kcf")
 
-with open('./data/courses.json') as f:
-    data = json.load(f)
+index_name = "quickstart"
 
-client = MongoClient(uri, tlsCAFile=certifi.where(), server_api=ServerApi('1'))
+pc.create_index(
+    name=index_name,
+    dimension=1024, # Replace with your model dimensions
+    metric="cosine", # Replace with your model metric
+    spec=ServerlessSpec(
+        cloud="aws",
+        region="us-east-1"
+            ) 
+)
 
-try:
-    database = client.get_database("course_syllabi")
-    collection = database.get_collection("syllabi")
-    collection.insert_one(data)
-    
+data = [
+    {"id": "vec1", "text": "Apple is a popular fruit known for its sweetness and crisp texture."},
+    {"id": "vec2", "text": "The tech company Apple is known for its innovative products like the iPhone."},
+    {"id": "vec3", "text": "Many people enjoy eating apples as a healthy snack."},
+    {"id": "vec4", "text": "Apple Inc. has revolutionized the tech industry with its sleek designs and user-friendly interfaces."},
+    {"id": "vec5", "text": "An apple a day keeps the doctor away, as the saying goes."},
+    {"id": "vec6", "text": "Apple Computer Company was founded on April 1, 1976, by Steve Jobs, Steve Wozniak, and Ronald Wayne as a partnership."}
+]
 
-    client.close()
+embeddings = pc.inference.embed(
+    model="multilingual-e5-large",
+    inputs=[d['text'] for d in data],
+    parameters={"input_type": "passage", "truncate": "END"}
+)
+print(embeddings[0])
 
+# Wait for the index to be ready
+while not pc.describe_index(index_name).status['ready']:
+    time.sleep(1)
 
+index = pc.Index(index_name)
 
+vectors = []
+for d, e in zip(data, embeddings):
+    vectors.append({
+        "id": d['id'],
+        "values": e['values'],
+        "metadata": {'text': d['text']}
+    })
 
-except Exception as e:
-    raise Exception("Unable to find the document due to the following error: ", e)
+index.upsert(
+    vectors=vectors,
+    namespace="ns1"
+)
 
+print(index.describe_index_stats())
 
+query = "Tell me about the tech company known as Apple."
+
+embedding = pc.inference.embed(
+    model="multilingual-e5-large",
+    inputs=[query],
+    parameters={
+        "input_type": "query"
+    }
+)
+results = index.query(
+    namespace="ns1",
+    vector=embedding[0].values,
+    top_k=3,
+    include_values=False,
+    include_metadata=True
+)
+
+print(results)
