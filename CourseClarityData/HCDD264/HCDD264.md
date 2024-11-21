@@ -7,7 +7,7 @@ Spring 2024
 Section 001: Tues-Thurs, 4:35 - 5:50 PM
 Room: Leonhard 103
 Please note that the specifics of this Course Syllabus are subject to change. Instructors will notify students of any changes and students will be responsiblefor abiding by them. Even if you print this syllabus, please check the online version often.
-Description
+## Description
 This course focuses on concepts, methods, techniques, and tools for designing effective technology-enabled experiences. The course will provide studentswith all the elements for a toolbox they can use to design and create both prototypes and working applications, and some analytic methods they can use toperform basic evaluations. The course will emphasize iterative design and the benefits of employing a cycle of analyze – design – built – evaluate in closecooperation with prospective technology users and other product stakeholders.
 In addition to more practice-oriented skills and knowledge, the course will provide students with an appreciation for some persistent design challengesincluding managing design trade-offs, ensuring universal and international access, working with others on co-design, and receiving and delivering designcritiques. Students who successfully complete the course will leave equipped to engage with practicing design teams in industry, government, and academia.
 Prerequisites
