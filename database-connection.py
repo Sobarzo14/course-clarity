@@ -19,12 +19,10 @@ pc.create_index(
 )
 
 data = [
-    {"id": "vec1", "text": "Apple is a popular fruit known for its sweetness and crisp texture."},
-    {"id": "vec2", "text": "The tech company Apple is known for its innovative products like the iPhone."},
-    {"id": "vec3", "text": "Many people enjoy eating apples as a healthy snack."},
-    {"id": "vec4", "text": "Apple Inc. has revolutionized the tech industry with its sleek designs and user-friendly interfaces."},
-    {"id": "vec5", "text": "An apple a day keeps the doctor away, as the saying goes."},
-    {"id": "vec6", "text": "Apple Computer Company was founded on April 1, 1976, by Steve Jobs, Steve Wozniak, and Ronald Wayne as a partnership."}
+    {"id": "HCDD113", "text": "HCDD 113 provides an introduction to the theories, models, and tools that inform Human-Centered Design and Development."},
+    {"id": "HCDD264", "text": "HCDD 264 focuses on concepts, methods, techniques, and tools for designing effective technology-enabled experiences."},
+    {"id": "HCDD364W", "text": "HCDD 364W focuses on concepts, methods, and techniques for studying users and evaluating technology in the context of use."},
+    {"id": "HCDD440", "text": "HCDD440 is the Human-Centered Design and Development Capstone course, and develops the research orientation and creative problem solving necessary for successful careers."}
 ]
 
 embeddings = pc.inference.embed(
