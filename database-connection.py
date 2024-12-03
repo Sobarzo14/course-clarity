@@ -53,7 +53,7 @@ index.upsert(
 
 print(index.describe_index_stats())
 
-query = "Tell me about the tech company known as Apple."
+query = "Tell me about IST courses."
 
 embedding = pc.inference.embed(
     model="multilingual-e5-large",
