@@ -15,6 +15,6 @@ export interface PredefinedPrompt {
   id: string;
   label: string;
   prompt: string;
-  category: 'general' | 'technical' | 'support';
+  category: 'class structure' | 'materials' | 'policies' | 'assignments';
   icon: string;
 }
