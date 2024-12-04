@@ -56,12 +56,14 @@ print(index.describe_index_stats())
 query = "Tell me about IST courses."
 
 embedding = pc.inference.embed(
+query = "Tell me about IST courses at Penn State."
+embeddings = pc.inference.embed(
     model="multilingual-e5-large",
-    inputs=[query],
-    parameters={
-        "input_type": "query"
-    }
+    inputs=[d['text'] for d in data],
+    parameters={"input_type": "passage", "truncate": "END"}
 )
+
+
 results = index.query(
     namespace="ns1",
     vector=embedding[0].values,
