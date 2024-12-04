@@ -10,30 +10,30 @@ export function PromptsPanel({ onSelectPrompt }: PromptsPanelProps) {
   const predefinedPrompts: PredefinedPrompt[] = [
     {
       id: '1',
-      label: 'Project Overview',
-      prompt: 'Can you give me an overview of this project?',
-      category: 'general',
+      label: 'Exam Format',
+      prompt: 'Describe the nature of the exams in this course.',
+      category: 'class structure',
       icon: 'MessageSquare'
     },
     {
       id: '2',
-      label: 'Code Examples',
-      prompt: 'Can you show me some code examples?',
-      category: 'technical',
+      label: 'Reading Requirements',
+      prompt: 'Is there a required text for this course?',
+      category: 'materials',
       icon: 'Code'
     },
     {
       id: '3',
-      label: 'Best Practices',
-      prompt: 'What are the best practices for this project?',
-      category: 'technical',
+      label: 'Attendance Policy',
+      prompt: 'What is the attendance policy for this course?',
+      category: 'policies',
       icon: 'Code'
     },
     {
       id: '4',
-      label: 'Troubleshooting',
-      prompt: 'I need help troubleshooting an issue.',
-      category: 'support',
+      label: 'Project Expectations',
+      prompt: 'Describe the nature of the projects in the course.',
+      category: 'assignments',
       icon: 'HelpCircle'
     }
   ];
