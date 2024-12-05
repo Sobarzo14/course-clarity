@@ -55,7 +55,7 @@ print(index.describe_index_stats())
 
 query = "Tell me about IST courses."
 
-embedding = pc.inference.embed(
+embedding = pc.inference.embed()
 query = "Tell me about IST courses at Penn State."
 embeddings = pc.inference.embed(
     model="multilingual-e5-large",

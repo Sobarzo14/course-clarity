@@ -1,4 +1,3 @@
-import React from 'react';
 import { MessageSquare, Code, HelpCircle } from 'lucide-react';
 import { PredefinedPrompt } from '../../types/chat';
 
