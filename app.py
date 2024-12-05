@@ -1,10 +1,17 @@
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 import google.generativeai as genai
+
+# Initialize Flask app
+app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+
+genai.configure(api_key="AIzaSyA7-6pTrGYA5esyNh3yS6rjzsj-2Om1lPY")
 
 instructions_file = open("instructions.txt", "r")
 instructions = instructions_file.readlines()
 instructions_file.close()
 
-genai.configure(api_key="AIzaSyA7-6pTrGYA5esyNh3yS6rjzsj-2Om1lPY")
 model = genai.GenerativeModel(
     model_name="gemini-1.5-flash",
     system_instruction=instructions,
@@ -13,17 +20,41 @@ chat = model.start_chat()
 
 reply = "Hi there! How can I help you today? To best assist you with your questions about Penn State's College of Information Sciences and Technology courses, it would be helpful if you could provide me with the course names and, ideally, your syllabi."
 
-while True:
-    prompt = input('\n\n' + reply + '\n\n')
-    response = chat.send_message(
-        "" + prompt,
-        generation_config=genai.types.GenerationConfig(
-            candidate_count=1,
-            stop_sequences=["x"],
-            temperature=0.1,
-        ),
-    )
-    reply = response.text
+@app.route('/api/chat', methods=['POST'])
+def chat_endpoint():
+    """
+    Endpoint to handle chat messages from the frontend.
+    """
+    try:
+        # Parse incoming JSON request
+        data = request.get_json()
+        user_message = data.get("message", "")
+
+        if not user_message:
+            return jsonify({"error": "No message provided"}), 400
+
+        # Generate a response using the LLM
+        response = chat.send_message(
+            user_message,
+            generation_config=genai.types.GenerationConfig(
+                candidate_count=1,
+                stop_sequences=["x"],
+                temperature=0.1,
+            )
+        )
+
+        # Extract the response text
+        bot_reply = response.candidates[0].text
+        return jsonify({"response": bot_reply}), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+if __name__ == "__main__":
+    # Run the Flask app
+    app.run(host="0.0.0.0", port=5000)
+
+
 #     You are an expert on Penn State couses in the college of Information Sciences and Technology. Your expertise includes providing accurate, objective, and up-to-date information about courses, professors, and assignments. Your primary role is to assist students by answering questions related to: Assignment deadlines. Professor information, including teaching awards, feedback, and research activity. Course details such as descriptions, grading policies, and prerequisites. Your behaviour and tone should be professional, concise, and friendly. Your responses should provide factual, objective, and helpful information. Avoid providing speculative or subjective information. If information is unavailable, guide users to alternative resources. Some appropriate recomendations would be for the user to speak to an academic advisor, their professor, or for them to attend office hours. If a user has not already done so, recommend that they provide you with their current syllabi for any courses thay may have questions about. If a user provides you with a syllabus, commit it to memory for future use and future question the user may have. When asked about a professor you should: Scrap ratemyprofessor for objective information about the professor. Check google scholar for information about their research. Lookup any teaching awards they may have. 
 
 # Here are some examples
