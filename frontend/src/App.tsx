@@ -78,7 +78,7 @@ function App() {
             <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
               <Bot size={20} className="text-blue-600" />
             </div>
-            <h1 className="text-xl font-semibold">Course Clarity Chatbot</h1>
+            <h1 className="text-xl font-semibold">Course Clarity</h1>
           </div>
         </div>
 

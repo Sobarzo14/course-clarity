@@ -1,4 +1,4 @@
-import { MessageSquare, Code, HelpCircle } from 'lucide-react';
+import { MessageSquare, Code, HelpCircle, Table, Backpack, Book, PencilLine} from 'lucide-react';
 import { PredefinedPrompt } from '../../types/chat';
 
 interface PromptsPanelProps {
@@ -12,39 +12,41 @@ export function PromptsPanel({ onSelectPrompt }: PromptsPanelProps) {
       label: 'Exam Format',
       prompt: 'Describe the nature of the exams in this course.',
       category: 'class structure',
-      icon: 'MessageSquare'
+      icon: 'PencilLine'
     },
     {
       id: '2',
       label: 'Reading Requirements',
       prompt: 'Is there a required text for this course?',
       category: 'materials',
-      icon: 'Code'
+      icon: 'Book'
     },
     {
       id: '3',
       label: 'Attendance Policy',
       prompt: 'What is the attendance policy for this course?',
-      category: 'policies',
-      icon: 'Code'
+      category: 'class structure',
+      icon: 'Backpack'
     },
     {
       id: '4',
-      label: 'Project Expectations',
-      prompt: 'Describe the nature of the projects in the course.',
+      label: 'Due Date Calendar',
+      prompt: 'Provide a table with all the assignments, exams, and due dates for the course.',
       category: 'assignments',
-      icon: 'HelpCircle'
+      icon: 'Table'
     }
   ];
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'MessageSquare':
-        return <MessageSquare size={16} />;
-      case 'Code':
-        return <Code size={16} />;
-      case 'HelpCircle':
-        return <HelpCircle size={16} />;
+      case 'Table':
+        return <Table size={16} />;
+      case 'Backpack':
+        return <Backpack size={16} />;
+      case 'Book':
+          return <Book size={16} />;
+      case 'PencilLine':
+            return <PencilLine size={16} />;
       default:
         return <MessageSquare size={16} />;
     }

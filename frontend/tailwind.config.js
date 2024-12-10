@@ -1,13 +1,13 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    './project/index.html',
-    './project/src/**/*.{js,ts,jsx,tsx}',
-    './project/**/*.{js,ts,jsx,tsx}',
+    './frontend/index.html', // Path to index.html if Tailwind classes are used there.
+    './frontend/src/**/*.{js,ts,jsx,tsx}', // Include all components and relevant files within the src directory.
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
-}
-
+  plugins: [ 
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
+};
