@@ -19,7 +19,7 @@ function App() {
 
   const fetchDataFromFlask = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/data'); // Flask endpoint URL
+      const response = await axios.get('http://127.0.0.1:3000/api/data'); // Flask endpoint URL
 
       console.log('Data from Flask:', response.data);
 

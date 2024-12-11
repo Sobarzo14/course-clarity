@@ -22,7 +22,7 @@ docs = loader.load()
 len(docs)
 
 text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=200,
+    chunk_size=500,
     chunk_overlap=0,
     length_function=len,
     add_start_index=True
