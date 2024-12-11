@@ -1,13 +1,14 @@
-# Course Syllabus
-## HCDD 113: Foundations of Human-Centered Design and DevelopmentSpring 2024
+Course Syllabus
+Jump to Today
+HCDD 113: Foundations of Human-Centered Design and DevelopmentSpring 2024
 Please note that the specifics of this Course Syllabus are subject to change. The instructor will notify studentsof any changes and students will be responsible for abiding by them. 
-**Instructor:** Jacquelyn Williams, jkg93@psu.edu (mailto:jkg93@psu.ecu) Office hours: by appointment.
-**Learning Assistants:** Wynne Segal, wqs5272@psu.edu. (mailto:wqs5272@psu.edu)
-**Email Interactions:** I will make every effort to reply to your emails within 24 hours.
-**Class meeting time & place:** Spring 2024:  MWF 10:10 - 11:00 in Westgate Bldg. E165.
-**Office Hours:**  E121 Monday/Wednesday 11:00 - 12:00 and by appointment
-**Content Originator:** Dr. Steven R. Haynes
-**COVID-19 Policies:**
+Instructor: Jacquelyn Williams, jkg93@psu.edu (mailto:jkg93@psu.ecu) Office hours: by appointment.
+Learning Assistants: Wynne Segal, wqs5272@psu.edu. (mailto:wqs5272@psu.edu)
+Email Interactions: I will make every effort to reply to your emails within 24 hours.
+Class meeting time & place: Spring 2024:  MWF 10:10 - 11:00 in Westgate Bldg. E165.
+Office Hours:  E121 Monday/Wednesday 11:00 - 12:00 and by appointment
+Content Originator: Dr. Steven R. Haynes
+COVID-19 Policies:
 Whatever Penn State University requires with respect to pandemic measures (such aswearing face masks in university buildings, including classrooms) should be followed in this course. Please beaware of public health circumstances, and comply with all university policies. This is to protect your health andsafety as well as the health and safety of your classmates, instructor, and the university community.
 See:
 https://virusinfo.psu.edu/ (https://virusinfo.psu.edu/)
@@ -163,4 +164,3 @@ http://guru.psu.edu/policies/AD42.html (http://guru.psu.edu/policies/AD42.html)
 (http://guru.psu.edu/policies/AD42.html)
 Policy AD42 Statement on Nondiscrimination and Harassment:
 ThePennsylvania State University is committed to the policy that all persons shall have equal access to programs,facilities, admission and employment without regard to personal characteristics not related to ability,performance, or qualifications as determined by university policy or by state or federal authorities. It is the policyof the University to maintain an academic and work environment free of discrimination, including harassment.The Pennsylvania State University prohibits discrimination and harassment against any person because of age,ancestry, color, disability or handicap, national origin, race, religious creed, sex, sexual orientation, genderidentity or veteran status. Discrimination or harassment against faculty, staff or students will not be tolerated atThe Pennsylvania State University. You may direct inquiries to the Office of Multicultural Affairs, 332 InformationSciences and Technology Building, University Park, PA 16802; Tel 814-865-0077 or to the Office of AffirmativeAction, 328 Boucke Building, University Park, PA 16802-5901; Tel 814-865-4700/V, 814-863-1150/TTY.
-

@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState } from 'react';
 import { ChatHistory } from './components/Chat/ChatHistory';
 import { ChatInput } from './components/Chat/ChatInput';
@@ -17,25 +16,7 @@ function App() {
   ]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetchDataFromFlask = async () => {
-    try {
-      const response = await axios.get('http://127.0.0.1:3000/api/data'); // Flask endpoint URL
-
-      console.log('Data from Flask:', response.data);
-
-      // Process the data as needed
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching data from Flask:', error);
-      throw error;
-    }
-  };
-
-
-
-
   const handleSendMessage = async (content: string) => {
-    fetchDataFromFlask();
     const userMessage: Message = {
       id: Date.now().toString(),
       content,
@@ -43,51 +24,21 @@ function App() {
       timestamp: new Date().toLocaleTimeString(),
     };
 
-    // Add user message to the state
     setMessages((prev) => [...prev, userMessage]);
     setIsLoading(true);
 
-    try {
-      // Make the POST request to the backend API
-      const response = await fetch('http://127.0.0.1:3000/post-endpoint', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ message: content }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch response from the server');
-      }
-
-      const data = await response.json();
-
-      // Add bot response to the state
+    // Simulate bot response
+    setTimeout(() => {
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: data.reply || 'No reply from server', // Use the server's response
+        content: 'This is a simulated response from the RAG system. In a real implementation, this would be generated based on retrieved relevant documents and an LLM.',
         isBot: true,
         timestamp: new Date().toLocaleTimeString(),
       };
-
       setMessages((prev) => [...prev, botMessage]);
-    } catch (error) {
-      console.error('Error sending message:', error);
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: (Date.now() + 1).toString(),
-          content: 'Failed to get a response from the server. Please try again later.',
-          isBot: true,
-          timestamp: new Date().toLocaleTimeString(),
-        },
-      ]);
-    } finally {
       setIsLoading(false);
-    }
+    }, 1000);
   };
-
 
   return (
     <div className="flex h-screen bg-gray-100">
