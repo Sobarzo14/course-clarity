@@ -1,4 +1,5 @@
-import { MessageSquare, Code, HelpCircle, Table, Backpack, Book, PencilLine} from 'lucide-react';
+import React from 'react';
+import { MessageSquare, Table, Backpack, Book, PencilLine } from 'lucide-react';
 import { PredefinedPrompt } from '../../types/chat';
 
 interface PromptsPanelProps {
@@ -11,28 +12,28 @@ export function PromptsPanel({ onSelectPrompt }: PromptsPanelProps) {
       id: '1',
       label: 'Exam Format',
       prompt: 'Describe the nature of the exams in this course.',
-      category: 'class structure',
+      category: 'technical',
       icon: 'PencilLine'
     },
     {
       id: '2',
       label: 'Reading Requirements',
       prompt: 'Is there a required text for this course?',
-      category: 'materials',
+      category: 'technical',
       icon: 'Book'
     },
     {
       id: '3',
       label: 'Attendance Policy',
       prompt: 'What is the attendance policy for this course?',
-      category: 'class structure',
+      category: 'technical',
       icon: 'Backpack'
     },
     {
       id: '4',
       label: 'Due Date Calendar',
       prompt: 'Provide a table with all the assignments, exams, and due dates for the course.',
-      category: 'assignments',
+      category: 'technical',
       icon: 'Table'
     }
   ];
@@ -44,9 +45,9 @@ export function PromptsPanel({ onSelectPrompt }: PromptsPanelProps) {
       case 'Backpack':
         return <Backpack size={16} />;
       case 'Book':
-          return <Book size={16} />;
+        return <Book size={16} />;
       case 'PencilLine':
-            return <PencilLine size={16} />;
+        return <PencilLine size={16} />;
       default:
         return <MessageSquare size={16} />;
     }

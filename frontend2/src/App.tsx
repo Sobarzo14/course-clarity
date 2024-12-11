@@ -23,51 +23,22 @@ function App() {
       isBot: false,
       timestamp: new Date().toLocaleTimeString(),
     };
-  
+
     setMessages((prev) => [...prev, userMessage]);
     setIsLoading(true);
-  
-    try {
-      // Send the user message to the backend
-      const response = await fetch('http://127.0.0.1:5000/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: content }),
-      });
-  
-      if (!response.ok) {
-        throw new Error('Failed to fetch response from server');
-      }
-  
-      const data = await response.json();
-  
-      if (data.error) {
-        throw new Error(data.error);
-      }
-  
+
+    // Simulate bot response
+    setTimeout(() => {
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: data.response,
+        content: 'This is a simulated response from the RAG system. In a real implementation, this would be generated based on retrieved relevant documents and an LLM.',
         isBot: true,
         timestamp: new Date().toLocaleTimeString(),
       };
-  
       setMessages((prev) => [...prev, botMessage]);
-    } catch (error) {
-      console.error(error);
-      const errorMessage: Message = {
-        id: (Date.now() + 2).toString(),
-        content: 'Sorry, something went wrong while fetching the response.',
-        isBot: true,
-        timestamp: new Date().toLocaleTimeString(),
-      };
-  
-      setMessages((prev) => [...prev, errorMessage]);
-    } finally {
       setIsLoading(false);
-    }
+    }, 1000);
   };
-  
 
   return (
     <div className="flex h-screen bg-gray-100">
@@ -78,7 +49,7 @@ function App() {
             <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
               <Bot size={20} className="text-blue-600" />
             </div>
-            <h1 className="text-xl font-semibold">Course Clarity</h1>
+            <h1 className="text-xl font-semibold">RAG Assistant</h1>
           </div>
         </div>
 
