@@ -7,7 +7,7 @@ Description
 HCDD 440: Human-Centered Capstone (3 credits)
 The Human-Centered Design and Development Capstone course develops the research orientation andcreative problem-solving necessary for successful careers. The capstone develops these skills in thecontext of a semester-long project, the solution to which requires the integration of knowledge, skills, andanalytic techniques taught in the core curriculum. The capstone will also give students real-worldexperience in which they will need to work in teams and will be coached on ways to translate analyticoutcomes into meaningful and actionable information for decision-makers.
 The course is intended for seniors who have completed the core courses. The capstone projects willintegrate knowledge gained in technical subjects such as usability engineering, software constructionand engineering, and mobile computing as well as general information technology topics such asmachine learning, data mining, data integration and visualization, and privacy and security. Students willalso hone their presentation and technical writing skills, generating effective reports that not only explaintheir analytic processes, and assumptions underlying the processes and outcomes but alsocommunicate the limitations of their approach and potential alternate strategies.
-Prerequisites
+## Prerequisites
 IST 261 or IST 361
 HCDD 340 (recommended)
 HCDD 364W

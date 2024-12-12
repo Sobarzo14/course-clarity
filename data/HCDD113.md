@@ -1,11 +1,14 @@
-Course Syllabus
-Jump to Today
-HCDD 113: Foundations of Human-Centered Design and DevelopmentSpring 2024
+
+# HCDD 113: Foundations of Human-Centered Design and DevelopmentSpring 2024
 Please note that the specifics of this Course Syllabus are subject to change. The instructor will notify studentsof any changes and students will be responsible for abiding by them. 
-Instructor: Jacquelyn Williams, jkg93@psu.edu (mailto:jkg93@psu.ecu) Office hours: by appointment.
-Learning Assistants: Wynne Segal, wqs5272@psu.edu. (mailto:wqs5272@psu.edu)
-Email Interactions: I will make every effort to reply to your emails within 24 hours.
-Class meeting time & place: Spring 2024:  MWF 10:10 - 11:00 in Westgate Bldg. E165.
+## Instructor:
+Jacquelyn Williams, jkg93@psu.edu (mailto:jkg93@psu.ecu) Office hours: by appointment.
+## Learning Assistants:
+Wynne Segal, wqs5272@psu.edu. (mailto:wqs5272@psu.edu)
+## Email Interactions:
+I will make every effort to reply to your emails within 24 hours.
+## Class meeting time & place: 
+Spring 2024:  MWF 10:10 - 11:00 in Westgate Bldg. E165.
 Office Hours:  E121 Monday/Wednesday 11:00 - 12:00 and by appointment
 Content Originator: Dr. Steven R. Haynes
 COVID-19 Policies:
